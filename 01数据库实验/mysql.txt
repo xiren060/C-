@@ -1,0 +1,84 @@
+net start mysql		# 启动mysql服务器
+
+mysql –u root –p
+
+  show databases;                        //查看库
+  create  DATABASE 数据库名;              //建库
+
+  drop database 数据库名；               //删库
+
+use 数据库名；                           //使用库
+
+show tables;                             //查看库中的表
+describe 表名;                           //查看表定义
+
+
+create table 表名(                       //建表
+      列名 列的定义 primary key ,                    
+      列名 列的定义   ,
+      列名 列的定义 not null ，
+                           ..........
+                          ）
+DROP TABLE 表名 ;                          //删表
+
+alter table 表名                            //修改表中某字段为主键
+      add primary key(字段)；
+
+alter table 表名                               //修改表的列为 空
+      modify column 列名 列的定义 null;     
+	  
+alter table 表名                               //修改列的定义
+      modify column 列名 列的定义 ;
+	  
+alter table 表名                              //添加一列
+      add 列名 列的定义; 
+
+  insert into 表名                            //添加数据
+      values 
+     (数据 ,数据,.....,数据),
+     (数据 ,数据,.....,数据),
+         ..............
+     (数据 ,数据,.....,数据);
+
+   select * from  表名;                       //查询表中所有数据 
+
+  create table 表名1 as select 数据 from 表名2; //从表2选数据  建立表1
+
+  select  列名1，列名2...... from 表名；              //查询表中指定列的信息
+
+   select  列名1 [as] 列别名,列名2 列别名 , ........ from 表名;     //给查询列起别名
+
+   select * 列名1, 列名2， ......  from 表名
+                     where   条件；                                          //where子句指定查询条件
+                                                                                      //< ,<= ,> ,>= ,<>  , !=
+                                                                                       // 逻辑比较判断not ,and ,or  ，between and
+
+    create index 索引名 on 表名(列名,列名,.....);      //创建索引
+	create UNIQUE INDEX 索引名 ON 表名(列名,列名,...)  //创建唯一索引
+	
+	show index from 表名                               //查看索引
+	drop index 索引名 on 表名                           //删除索引
+	
+	
+	create view 视图名[(别名,别名,....)]                //创建视图
+     as
+    select SQL语句	                                     
+
+
+
+****************************************************************************
+****************************************************************************
+
+create table student(
+学号 char(4) not null primary key,
+姓名 char (8) not null,
+数学 varchar(50),
+英语 varchar(50),
+计算机 varchar(50));
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+x=3.56
+a=3
+y1=sign(x)
+y2=x^a
+y3=sin(x)
+y4=cos(x)
+y5=tan(x^2)
+y6=2*tan(x)
+y7=a^x
+y8=log(abs(x-x^x))
+y9=asin(x^2-3*pi)
+y10=exp(x)
+y11=x^1./6
+y12=sqrt(2*x^2+(4*x./log((x+y10*y3)./2*x^2)))

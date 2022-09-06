@@ -1,0 +1,1 @@
+x=fsolve('x-(sin(x))/x',0.5)
